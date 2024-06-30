@@ -8,7 +8,7 @@ defmodule Commanded.Projections.Ecto.Mixfile do
     [
       app: :commanded_ecto_projections,
       version: @version,
-      elixir: "~> 1.12",
+      elixir: "~> 1.17",
       elixirc_paths: elixirc_paths(Mix.env()),
       aliases: aliases(),
       package: package(),
@@ -31,7 +31,7 @@ defmodule Commanded.Projections.Ecto.Mixfile do
 
   defp deps do
     [
-      {:commanded, "~> 1.4"},
+      {:commanded, github: "pauldemarco/commanded", branch: "1.17.1-otp-27"},
       {:ecto, "~> 3.11"},
       {:ecto_sql, "~> 3.11"},
       {:postgrex, ">= 0.0.0", only: :test},
